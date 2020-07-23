@@ -11,6 +11,10 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [path.resolve(__dirname, 'src/styles/variable.less')]
+    },
+    // webpack打包可视化分析
+    webpackBundleAnalyzer: {
+      openAnalyzer: false
     }
   },
   publicPath: '/fund/'
