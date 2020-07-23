@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "prettier": "prettier src/**/*.{js,vue} --write"
+    "prettier": "prettier src/**/*.{js,vue} --write",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "axios": "^0.19.2",
