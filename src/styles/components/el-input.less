@@ -1,0 +1,103 @@
+.el-textarea__inner,
+.el-input__inner {
+  border-color: #DDDDDD;
+  color: @color-text-1;
+  padding: 5px 12px;
+  font-family: @font-family;
+
+  &:hover,
+  &:focus {
+    border-color: @color-text-1;
+  }
+}
+
+.el-input__inner {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+
+.large {
+  &> .el-input__inner {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .el-input__icon {
+    line-height: 40px;
+  }
+}
+
+.el-textarea__inner {
+  resize: none;
+  line-height: 22px;
+}
+
+.el-input__icon {
+  line-height: 32px;
+  font-size: 16px;
+  width: 16px;
+  margin-left: 8px;
+}
+
+// 字数限制
+.el-textarea .el-input__count,
+.el-input .el-input__count {
+  bottom: 8px;
+  right: 8px;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #CCCCCC;
+  background-color: transparent;
+}
+
+.el-input .el-input__count {
+  height: 32px;
+  line-height: 32px;
+}
+
+.el-input .el-input__count .el-input__count-inner {
+  background: transparent;
+  padding: 0;
+}
+
+.el-input__suffix {
+  color: #CCCCCC;
+  right: 12px;
+
+  .el-input__suffix-inner {
+    height: 100%;
+
+    .el-input__icon {
+      color: #CCCCCC;
+
+      &:hover {
+        color: @color-text-1;
+      }
+    }
+  }
+}
+
+.el-input__icon.el-icon-view {
+  font-family: 'iconfont', serif !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  transform: scale(1);
+}
+
+// 密码显示小眼睛重写
+.el-input__inner[type=text] + .el-input__suffix .el-icon-view::before {
+  content: '\e7dd';
+}
+
+.el-input__inner[type=password] + .el-input__suffix .el-icon-view::before {
+  content: '\e7dc';
+}
+
+// 去掉 Edge 浏览器密码输入框自动添加小眼睛
+::-ms-clear,
+::-ms-reveal {
+  display: none;
+}

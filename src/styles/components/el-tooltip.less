@@ -1,0 +1,60 @@
+.el-tooltip__popper.is-dark {
+  background-color: @color-white;
+  box-shadow: @box-shadow;
+  padding: 12px 16px;
+  line-height: 24px;
+  font-size: 14px;
+  max-width: 540px;
+  color: @color-text-1;
+  overflow-y: auto;
+  max-height: 286px;
+  white-space: pre-line;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+
+  &[x-placement^='bottom'] {
+    margin-top: 8px;
+  }
+
+  &[x-placement^='top'] {
+    margin-bottom: 8px;
+  }
+
+  // &[x-placement='bottom-start'] {
+  //   border-radius: 0 8px 8px 8px;
+  // }
+  //
+  // &[x-placement='bottom-end'] {
+  //   border-radius: 8px 0 8px 8px;
+  // }
+  //
+  // &[x-placement='top-start'] {
+  //   border-radius: 8px 8px 8px 0;
+  // }
+  //
+  // &[x-placement='top-end'] {
+  //   border-radius: 8px 8px 0 8px;
+  // }
+
+  &.small {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+
+    // &[x-placement='bottom-start'] {
+    //   border-radius: 0 4px 4px 4px;
+    // }
+    //
+    // &[x-placement='bottom-end'] {
+    //   border-radius: 4px 0 4px 4px;
+    // }
+    //
+    // &[x-placement='top-start'] {
+    //   border-radius: 4px 4px 4px 0;
+    // }
+    //
+    // &[x-placement='top-end'] {
+    //   border-radius: 4px 4px 0 4px;
+    // }
+  }
+}

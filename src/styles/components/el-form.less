@@ -1,0 +1,114 @@
+.el-form {
+  .el-form-item__label {
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    margin-bottom: 10px;
+    color: @color-text-2;
+    padding: 0;
+  }
+
+  .label-name {
+    line-height: 22px;
+  }
+
+  .el-form-item.is-required .el-form-item__label {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: '*';
+      display: inline-block;
+      color: @color-error;
+      margin-left: 4px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .el-form-item__content {
+    line-height: unset;
+  }
+
+  .el-form-item {
+    margin-bottom: 12px;
+
+    &.is-error {
+      margin-bottom: 24px;
+
+      .el-input__inner {
+        border-color: @color-error;
+      }
+    }
+  }
+
+  // 表单验证错误提示移到右上角
+  .el-form-item__error {
+    font-size: 12px;
+    color: @color-error;
+  }
+
+  // 修改校验成功的 icon 为感叹号
+  .el-input__validateIcon.el-icon-circle-close::before {
+    content: '\E7AF';
+    color: @color-error;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  // 隐藏校验成功的 icon
+  .el-form-item--feedback .el-icon-circle-check::before {
+    display: none;
+  }
+
+  // 大号表单，间距更大
+  &.large {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.small {
+    .el-form-item__label {
+      margin-bottom: 4px;
+    }
+
+    .el-form-item {
+      margin-bottom: 12px;
+
+      &.is-error {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .el-form-item.el-form-item--feedback.is-error.is-required .el-input__suffix {
+    opacity: 1;
+    right: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .el-form-item.el-form-item--feedback.is-error.is-required .el-input__suffix-inner {
+    display: none;
+  }
+
+  .el-form-item--feedback .el-input__validateIcon {
+    display: none;
+  }
+
+  .el-form-item--feedback.is-error .el-input__validateIcon {
+    display: inline-block;
+  }
+
+  .el-form-item.is-error .el-input__inner,
+  .el-form-item.is-error .el-input__inner:focus,
+  .el-form-item.is-error .el-textarea__inner,
+  .el-form-item.is-error .el-textarea__inner:focus {
+    border-color: @color-error;
+    background-color: rgba(@color-error, 0.1);
+  }
+}

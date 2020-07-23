@@ -1,0 +1,80 @@
+// 变更 el-radio 颜色和阴影
+.el-radio-button__inner {
+  border-color: @color-bg !important;
+  background: @color-bg !important;
+
+  &:hover {
+    color: @color-primary;
+  }
+}
+
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  background: @color-primary !important;
+  box-shadow: none !important;
+}
+
+.el-radio {
+  display: inline-flex;
+  align-items: center;
+
+  .el-radio__input {
+    width: 14px;
+    height: 14px;
+
+    .el-radio__inner {
+      width: 14px;
+      height: 14px;
+      background-color: @color-white;
+      border: 1px solid #DDDDDD;
+      transition: all 0.2s;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .el-radio__label {
+    color: @color-text-1;
+    padding-left: 8px;
+    height: 14px;
+    line-height: 14px;
+  }
+}
+
+// 被选中的
+.el-radio__input.is-checked .el-radio__inner {
+  border: 5px solid @color-primary;
+  background: transparent;
+
+  &:hover {
+    border-color: @color-primary;
+  }
+
+  // 实心圆填充色
+  &::after {
+    background-color: @color-primary;
+  }
+}
+
+// 禁用
+.el-radio .el-radio__input.is-disabled .el-radio__inner {
+  background: #EEEEEE;
+}
+
+// 去掉阴影
+.el-radio:focus:not(.is-focus):not(:active) .el-radio__inner {
+  box-shadow: none;
+}
+
+.el-radio:focus:not(.is-focus):not(:active):not(.is-disabled) .el-radio__inner {
+  box-shadow: none;
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+  color: @color-text-1;
+}
+
+.el-radio .el-radio__input:not(.is-checked):not(.is-disabled) .el-radio__inner:hover {
+  border-color: @color-text-1;
+}

@@ -1,0 +1,187 @@
+.el-table {
+  background-color: @color-white;
+
+  table {
+    border: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  .cell {
+    font-size: 14px;
+    padding: 0 16px;
+    line-height: 46px;
+    color: @color-text-1;
+  }
+
+  th,
+  tr,
+  td {
+    background-color: @color-white;
+    border: 0;
+    outline: 0;
+    padding: 0;
+
+    &.is-leaf {
+      border: 0;
+    }
+  }
+
+  th {
+    background-color: @color-bg;
+    height: 46px;
+
+    &>.cell {
+      padding: 0 16px;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid #EBEBEB;
+    background-color: transparent;
+    height: 64px;
+
+    .cell {
+      line-height: 24px;
+    }
+  }
+
+  th .cell {
+    color: @color-text-2;
+    font-weight: 600;
+    line-height: 46px;
+
+    &.highlight {
+      color: @color-primary;
+
+      .el-icon-arrow-down {
+        color: @color-primary;
+        opacity: 1;
+      }
+    }
+  }
+
+  .el-table__body tr.current-row > td {
+    background-color: rgba(@color-primary, 0.1) !important;
+    .cell {
+      color: @color-primary;
+    }
+  }
+
+  th:first-child .cell {
+    padding-left: 24px;
+  }
+
+  th:nth-last-child(2) .cell {
+    padding-right: 24px;
+  }
+
+  .el-table__row td:first-child .cell {
+    padding-left: 24px;
+  }
+
+  .el-table__row td:nth-last-child(1) .cell {
+    padding-right: 24px;
+  }
+
+  &.el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: transparent;
+    cursor: unset;
+  }
+
+  .descending .sort-caret.descending {
+    border-top-color: @color-primary;
+  }
+
+  .ascending .sort-caret.ascending {
+    border-bottom-color: @color-primary;
+  }
+}
+
+// 过滤筛选框
+.el-table-filter {
+  background-color: @color-bg;
+  box-shadow: @box-shadow;
+  border: none;
+  border-radius: 4px;
+  margin: 0;
+  margin-top: -2px;
+
+  // 过滤单选框
+  .el-table-filter__list {
+    min-width: 88px;
+    padding: 8px 0;
+
+    .el-table-filter__list-item {
+      line-height: 30px;
+      padding: 0 16px;
+      opacity: 0.9;
+
+      &.is-active {
+        color: @color-primary;
+        background-color: unset;
+        opacity: 1;
+      }
+
+      &:hover {
+        color: @color-primary;
+        background-color: unset;
+      }
+    }
+  }
+
+  // 过滤复选框
+  .el-table-filter__checkbox-group {
+    padding: 16px 0;
+    min-width: 88px;
+
+    label.el-checkbox {
+      padding: 8px 16px;
+      margin: 0 0 16px 0;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .el-table-filter__bottom {
+    border-color: @color-bg;
+    padding: 16px;
+
+    button {
+      font-size: 14px;
+      height: 14px;
+      line-height: 14px;
+      color: @color-text-1;
+      padding: 0;
+      margin-right: 8px;
+
+      &:hover {
+        color: @color-primary;
+      }
+    }
+  }
+}
+
+// 修改表格过滤筛选图标
+.el-table__column-filter-trigger .el-icon-arrow-down {
+  font-family: 'iconfont', serif !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  transform: scale(1);
+  color: rgba(255, 255, 255, 0.4);
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &::before {
+    content: '\e7ba';
+  }
+}

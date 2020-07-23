@@ -1,0 +1,148 @@
+html,
+body {
+  background: @color-bg;
+  font-family: @font-family;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'DIN-Medium-web';
+  src: url("//assets.imedao.com/ugc/font/DIN-Medium.woff") format("truetype")
+}
+
+@font-face {
+  font-family: 'DIN-Bold-web';
+  src: url("//assets.imedao.com/ugc/font/DIN-Bold.woff") format("truetype")
+}
+
+@font-face {
+  font-family: 'DIN-Regular-web';
+  src: url("//assets.imedao.com/ugc/font/DIN-Regular.woff") format("truetype")
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 18px;
+  color: @color-text-3;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: @color-text-1;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: @color-text-1;
+  font-weight: 600;
+}
+
+span {
+  display: inline-block;
+}
+
+// 颜色类
+.color-primary {
+  color: @color-primary;
+}
+
+.color-error {
+  color: @color-error;
+}
+
+.color-warning {
+  color: @color-warning;
+}
+
+.color-success {
+  color: @color-success;
+}
+
+.color-text-2 {
+  color: @color-text-2;
+}
+
+.color-text-3 {
+  color: @color-text-3;
+}
+
+.color-up {
+  color: #ff6600;
+}
+
+.color-down {
+  color: #0fa578;
+}
+
+.link {
+  color: @color-primary;
+  cursor: pointer;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.code {
+  font-family: @font-code;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+// icon 禁用
+i[disabled='disabled'] {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: @color-primary;
+
+  &:active, &:visited, &:hover {
+    color: @color-primary;
+  }
+}
+
+/* 垂直滚动条样式重写 */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* input placeholder样式 */
+::-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+
+::-moz-placeholder {
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: #CCCCCC;
+  opacity: 1;
+}

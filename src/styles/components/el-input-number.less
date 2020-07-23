@@ -1,0 +1,31 @@
+.el-input-number.is-controls-right {
+  width: 104px;
+  line-height: 32px;
+
+  .el-input__inner {
+    padding-left: 16px;
+    text-align: left;
+  }
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    width: 23px;
+    font-size: 16px;
+    background: @color-white;
+    height: 16px;
+    line-height: 16px;
+    border-color: #DDDDDD;
+  }
+
+  i {
+    color: @color-text-3;
+
+    &:hover {
+      color: @color-text-1;
+    }
+  }
+}
+
+.el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled) {
+  border-color: unset;
+}

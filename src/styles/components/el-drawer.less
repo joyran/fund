@@ -1,0 +1,38 @@
+.el-drawer {
+  background: @color-white;
+  box-shadow: @box-shadow;
+  border-left: 1px solid #DDDDDD;
+
+  .el-drawer__header {
+    padding: 0 24px;
+    height: 46px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #EBEBEB;
+
+    & > span {
+      font-size: 14px;
+      line-height: 22px;
+      color: @color-text-1;
+      font-weight: 600;
+    }
+  }
+
+  .el-drawer__body {
+    min-height: calc(100vh - 64px);
+  }
+
+  .el-dialog__close {
+    color: @color-text-3;
+    font-size: 18px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: @color-text-1;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.v-modal {
+  opacity: 0.4;
+}

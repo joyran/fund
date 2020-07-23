@@ -1,0 +1,57 @@
+// 灰色版本
+// .el-switch__core {
+//   border-radius: 12px;
+//   border: 1px solid @color-bg;
+//   background-color: transparent;
+//   left: 0;
+//   height: 16px;
+//   width: 32px !important;
+//
+//   &::after {
+//     width: 16px;
+//     height: 16px;
+//     background-color: @color-bg;
+//     top: -1px;
+//     left: -1px;
+//     opacity: 1;
+//   }
+// }
+
+// .el-switch.is-checked .el-switch__core {
+//   background-color: @color-bg;
+//   border: 1px solid @color-bg;
+//
+//   &::after {
+//     opacity: 0.6;
+//     background-color: #FFFFFF;
+//     margin-left: -16px;
+//   }
+// }
+
+// 蓝色版本
+.el-switch__core {
+  border-radius: 14px;
+  border: none;
+  background-color: @color-text-3;
+  left: 0;
+  height: 16px;
+  width: 28px !important;
+
+  &::after {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.el-switch.is-checked .el-switch__core {
+  background-color: @color-success;
+  border: none;
+
+  &::after {
+    background-color: #FFFFFF;
+    margin-left: -14px;
+  }
+}

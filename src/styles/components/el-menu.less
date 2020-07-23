@@ -1,0 +1,94 @@
+.el-menu {
+  width: 192px;
+  border-right: none;
+  font-size: 14px;
+  background-color: @color-bg !important;
+
+  i {
+    opacity: 0.4;
+    color: @color-text-1;
+  }
+
+  .el-submenu.is-active:not(.is-opened) .el-submenu__title {
+    .iconfont {
+      color: @color-primary;
+      opacity: 1;
+    }
+
+    span {
+      color: @color-primary;
+      opacity: 1;
+    }
+  }
+}
+
+// icon和文字间隔, 颜色没办法继承，只能手动设置
+.el-submenu,
+.el-menu-item {
+  .iconfont {
+    margin-right: 8px;
+    color: #FFFFFF;
+    font-size: 20px;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+  }
+}
+// 二级子菜单左边距/宽度
+.el-submenu {
+  .el-menu-item {
+    padding-left: 46px !important;
+    padding-right: 20px !important;
+  }
+}
+
+ul.el-menu {
+  overflow: hidden;
+}
+// 行高、hover/active背景色和透明度
+.el-menu-item,
+.el-submenu__title {
+  height: 46px;
+  display: flex;
+  align-items: center;
+
+  span {
+    opacity: 0.9;
+    font-size: 14px;
+    line-height: 46px;
+    height: 46px;
+    display: inline-block;
+  }
+
+  &.is-active {
+    background-color: @color-primary !important;
+
+    i {
+      color: @color-text-1 !important;
+      opacity: 0.9 !important;
+    }
+
+    span {
+      color: @color-text-1 !important;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-bg;
+
+    .iconfont {
+      color: @color-primary;
+      opacity: 1;
+    }
+
+    span {
+      color: @color-primary;
+      opacity: 1;
+    }
+  }
+
+  .el-submenu__icon-arrow {
+    font-size: 14px;
+  }
+}

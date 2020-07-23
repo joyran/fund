@@ -1,0 +1,59 @@
+// message 轻提示
+
+.el-message {
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  background-color: @color-white;
+  box-shadow: @box-shadow;
+  border: 1px solid #DDDDDD;
+  min-width: 360px;
+
+  // 关闭按钮
+  .el-message__closeBtn {
+    font-size: 16px;
+    font-weight: bold;
+    color: @color-text-3;
+    margin-left: 100px;
+
+    &:hover {
+      color: @color-text-1;
+    }
+  }
+
+  // icon
+  .iconfont {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  // 内容
+  .el-message__content {
+    font-size: 14px;
+    color: @color-text-1;
+  }
+}
+
+// 成功消息
+.el-message--success {
+  .iconfont {
+    color: @color-success;
+  }
+}
+
+// 失败消息
+.el-message--error {
+  .iconfont {
+    color: @color-error;
+  }
+}
+
+// 告警消息
+.el-message--warning {
+  .iconfont {
+    color: @color-warning;
+  }
+}
