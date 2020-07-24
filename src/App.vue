@@ -9,7 +9,7 @@
 
 <style lang="less" scoped>
 .app-body {
-  min-height: 100vh;
+  // min-height: 100vh;
   background: #fff;
 }
 </style>

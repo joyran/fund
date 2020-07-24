@@ -1,3 +1,4 @@
+<!-- 基金详情 -->
 <template lang="html">
   <div class="fund" v-if="!loading">
     <router-link :to="{ name: 'home' }">基金排行</router-link>

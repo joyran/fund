@@ -16,6 +16,5 @@ module.exports = {
     webpackBundleAnalyzer: {
       openAnalyzer: false
     }
-  },
-  publicPath: '/fund/'
+  }
 }

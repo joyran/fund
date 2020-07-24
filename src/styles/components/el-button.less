@@ -25,5 +25,25 @@
       background-color: mix(@color-primary, @color-white, 90%);
       border: none;
     }
+
+    &.is-disabled {
+      background-color: #eeeeee;
+      cursor: not-allowed;
+      color: #cccccc;
+      border: 1px solid #dddddd;
+
+      &:hover {
+        background-color: #eeeeee;
+        cursor: not-allowed;
+        color: #cccccc;
+        border: 1px solid #dddddd;
+      }
+    }
+  }
+
+  &.el-button--large {
+    height: 40px;
+    padding: 0 16px;
+    min-width: 104px;
   }
 }

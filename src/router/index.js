@@ -7,7 +7,25 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: resolve => require(['@/views/home'], resolve)
+    component: resolve => require(['@/views/home'], resolve),
+    redirect: { name: 'rank' },
+    children: [
+      {
+        path: 'rank',
+        name: 'rank',
+        component: resolve => require(['@/views/rank'], resolve)
+      },
+      {
+        path: 'optional',
+        name: 'optional',
+        component: resolve => require(['@/views/optional'], resolve)
+      }
+    ]
+  },
+  {
+    path: '/mobile',
+    name: 'mobile',
+    component: resolve => require(['@/views/mobile'], resolve)
   }
   // {
   //   path: '/fund/:code',
