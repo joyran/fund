@@ -329,6 +329,7 @@ export default {
       } else {
         this.query.fundType.splice(index, 1)
       }
+      this.query.pageIndex = 1
 
       this.getData()
     },
@@ -340,6 +341,7 @@ export default {
       } else {
         this.query.fundCompany.splice(index, 1)
       }
+      this.query.pageIndex = 1
 
       this.getData()
     },
@@ -365,7 +367,7 @@ export default {
     handleAddOptional(code) {
       const optionals = this.$ls.get('optionals') || []
       if (optionals.indexOf(code) === -1) {
-        optionals.push(code)
+        optionals.unshift(code)
         this.$ls.set('optionals', optionals)
         this.optionals = optionals
       }

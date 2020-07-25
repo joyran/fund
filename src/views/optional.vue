@@ -4,7 +4,7 @@
     <div class="optional-loading" v-if="loading" v-loading="loading"></div>
     <template v-else>
       <div class="optional-init" v-if="optionals.length === 0">
-        <p class="optional-init-head">还没有添加任何基金，推荐几个热门基金</p>
+        <p class="optional-init-head">热门自选基金</p>
         <el-row :gutter="16" style="width: 1000px; margin-bottom: 24px;">
           <el-col :span="8" v-for="(fund, index) in hotFunds" :key="index">
             <div class="fund-card" @click="handleSelectFund(fund.code)">
@@ -62,7 +62,7 @@
           type="primary"
           @click="handleAddOptional"
         >
-          自选
+          加自选
         </el-button>
       </div>
 
@@ -375,7 +375,7 @@ export default {
     handleChange(code) {
       const optionals = this.$ls.get('optionals') || []
       if (optionals.indexOf(code) === -1) {
-        optionals.push(code)
+        optionals.unshift(code)
         this.$ls.set('optionals', optionals)
         this.optionals = optionals
         this.getData()
@@ -398,10 +398,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   .optional-init-head {
     color: @color-text-2;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 
   .fund-card {
